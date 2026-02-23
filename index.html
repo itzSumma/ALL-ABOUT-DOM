@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+    <style>
+        h1{
+            color: brown;
+        }
+        #food-title{
+            color: green;
+            background-color: gainsboro;
+        }
+.food .fast-food {font-weight: 800;
+
+}
+.bg-red{
+    background-color: red;
+}
+.bold{
+    font-size: 3em;
+}
+.bold{
+    font-weight: 900;
+}
+      
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <h1>This is my header and no banner</h1> 
+       <h1>You need to make it interactive</h1> 
+    </header>
+    <main id="main-content">
+    <section id="names" class="persons">
+        <h2>Welcome to my<span> Dom </span></h2>
+        <p>Lorem ipsum <span>stylish</span>sit amet consectetur adipisicing elit. Eligendi, sit ab, expedita dolore nemo commodi esse ipsa aperiam placeat voluptatibus provident voluptate <span>Everyone</span>suscipit voluptatem repellat!</p>
+       <ul>
+        <li>sia</li>
+        <li>ria</li>
+        <li id="pooky">mia</li>
+        <li>kia</li>
+        <li>hia</li>
+        <li>tia</li>
+       </ul>
+    </section>
+    <section class="food">
+        <h1 id="food-title">
+            Foods I love
+        </h1>
+        <ul>
+            <li>Rice</li>
+            <li class="fast-food">Pizza</li>
+            <li>Potato</li>
+            <li>Fish</li>
+            <li>Meat</li>
+            <li class="fast-food">Pasta</li>
+            <li class="fast-food">Burger</li>
+            <li class="fast-food">Noodles</li>
+        </ul>
+    </section>
+    <section id="players-container">
+        <h1>Players</h1>
+        <ul id="player-list">
+            <li>Messi</li>
+            <li>Naymer</li>
+            <li>Benzamin</li>
+            <li>Gavi</li>
+            <!-- <li>pele</li> -->
+        </ul>
+    </section>
+    </main>
+    <script>
+    // console.log ("Hello Everyone")
+    // console.log ("Bye Everyone")
+    // console.log("Document Object Model")
+    const student = {
+        name : "summa",
+        id : 204 ,
+        study : function(subject) {
+            // console.log("studying current subject: " , subject );
+        }
+        // document.getElementsByName
+           }
+            const liCollection = document.getElementsByTagName("li")
+        // console.log(liCollection)
+        for(const li of liCollection){
+            // console.log(li.innerText)
+        }
+        const allHeading = document.getElementsByTagName("h1");
+        for (const heading of allHeading) {
+            // console.log(heading.innerText)
+        }
+        // get by id
+        const foodTitleH1 = document.getElementById("food-title");
+        // console.log(foodTitleH1.innerText);
+        foodTitleH1.innerText = " Foods I love to eat";
+        const pookyElement = document.getElementById('pooky');
+        pookyElement.innerText = "Mia-rita"
+
+        const foodElements = document.getElementsByClassName("fast-food")
+// console.log(foodElements);
+for(const food of foodElements){
+    // console.log(food.innerText)
+}
+const spanElements = document.querySelectorAll("#names p span");
+for(const span of spanElements){
+    // console.log(span.innerText); 
+}
+
+
+
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/cssIn.js"></script>
+    <script src="js/child.js"></script>
+    <script src="js/append.js"></script>
+</body>
+</html>
