@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Json</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #post-container {
+      max-width: 980px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      row: gap 30px;
+    }
+
+    .post-card {
+  background: #fff;
+  padding: 20px;
+  margin: 0;              
+ width: auto;
+  height: 100%;             
+  box-sizing: border-box;   
+ 
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  box-shadow: 2px 4px 8px rgba(3, 3, 3, 0.8);
+  transition: 0.5s;
+}
+    .post-card {
+      text-align: justify;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .user-id {
+      background: #2563eb;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    .body {
+      color: rgb(194, 194, 163);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="dataLoad()">Load Data</button>
+  <button onclick="loadPosts()">Load Posts</button>
+  <!-- <ol id="post-container">
+  </ol> -->
+  <h2>All Post Here</h2>
+  <div id="post-container">
+   
+
+  </div>
+  <!-- link Js -->
+  <script src="json.js"></script>
+  <!-- <script src="dataLoad.js"></script> -->
+
+
+</body>
+
+</html>
