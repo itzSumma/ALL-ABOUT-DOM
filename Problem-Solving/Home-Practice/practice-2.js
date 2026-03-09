@@ -21,3 +21,17 @@ for (let char of word) {
   }
 }
 console.log(count);
+// problem-3
+// sentence থেকে সবচেয়ে বড় word বের করো।
+const sentence = "I love learning javascript programming";
+// convert sentence to array
+const words = sentence.split(" ");
+let longest = "";
+// loop through words
+for (let word of words) {
+  // check word length
+  if (word.length > longest.length) {
+    longest = word;
+  }
+}
+console.log(longest);
