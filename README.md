@@ -38,7 +38,7 @@ I created this repo to **practice, track progress, and strengthen my JS fundamen
 
 ## Contact
 - GitHub: [itzSumma](https://github.com/itzSumma)  
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)  
+- LinkedIn: [Sultana Summa](https://www.linkedin.com/in/sultana-summa)
 
 ---
 
