@@ -30,3 +30,22 @@ function mostFrequent(arr) {
 }
 console.log(mostFrequent([1,2,2,3,3,3,4])); 
 
+/**
+ * *Find the first character that does not repeat.
+ **Input: "aabbcde"
+ **ANS:
+*/
+function firstUnique(str) {
+  let count = {};
+  for (let char of str) {
+    count[char] = (count[char] || 0) + 1;
+  }
+  for (let char of str) {
+    if (count[char] === 1) {
+      return char;
+    }
+  }
+}
+console.log(firstUnique("aabbcde"));
+
+/** */
