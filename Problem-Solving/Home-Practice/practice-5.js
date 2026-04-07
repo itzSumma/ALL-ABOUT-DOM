@@ -13,3 +13,12 @@ function countVowels(str){
 }
 
 console.log(countVowels("javascript"))
+
+/**
+ * *even number return করো  [1,2,3,4,5,6]
+ */
+function evenNumbers(arr){
+  return arr.filter(num => num % 2 === 0)
+}
+
+console.log(evenNumbers([1,2,3,4,5,6]))
