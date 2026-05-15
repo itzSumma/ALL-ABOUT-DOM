@@ -32,3 +32,35 @@ const groupedTransactions = transactions.reduce((acc, transaction) => {
 }, {});
 
 console.log(groupedTransactions);
+
+
+/*
+ * You are working on an E-commerce admin panel. You have an array of order objects. Each order has an orderId and a createdAt date string. Your task is to group these orders so the admin can see how many orders were placed on each specific date.
+ */
+Input :const orders = [
+  { orderId: "ORD001", createdAt: "2026-05-10" },
+  { orderId: "ORD002", createdAt: "2026-05-11" },
+  { orderId: "ORD003", createdAt: "2026-05-10" },
+  { orderId: "ORD004", createdAt: "2026-05-12" },
+  { orderId: "ORD005", createdAt: "2026-05-11" }
+];
+//**ANS*/
+const orders = [
+  { orderId: "ORD001", createdAt: "2026-05-10" },
+  { orderId: "ORD002", createdAt: "2026-05-11" },
+  { orderId: "ORD003", createdAt: "2026-05-10" },
+  { orderId: "ORD004", createdAt: "2026-05-12" },
+  { orderId: "ORD005", createdAt: "2026-05-11" }
+];
+
+const groupedOrders = orders.reduce((acc, order) => {
+  const date = order.createdAt;
+
+  if (!acc[date]) {
+    acc[date] = [];
+  }
+  acc[date].push(order);
+  return acc;
+}, {});
+
+console.log(groupedOrders);
