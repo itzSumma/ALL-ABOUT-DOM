@@ -64,3 +64,40 @@ const groupedOrders = orders.reduce((acc, order) => {
 }, {});
 
 console.log(groupedOrders);
+
+
+/*
+ *You have an array of sales transactions. Each transaction has a category and a revenue amount. Your task is to return an object where each key is a category, and the value is the total sum of revenue for that category. 
+ */
+
+ Input:const sales = [
+  { category: "Electronics", revenue: 500 },
+  { category: "Clothing", revenue: 100 },
+  { category: "Electronics", revenue: 300 },
+  { category: "Food", revenue: 50 },
+  { category: "Clothing", revenue: 200 }
+];
+//**ANS*/
+const sales = [
+  { category: "Electronics", revenue: 500 },
+  { category: "Clothing", revenue: 100 },
+  { category: "Electronics", revenue: 300 },
+  { category: "Food", revenue: 50 },
+  { category: "Clothing", revenue: 200 }
+];
+
+const totalRevenueByCategory = sales.reduce((acc, sale) => {
+  const category = sale.category;
+
+  // 1. If the category is not in our object yet, set it to 0
+  if (!acc[category]) {
+    acc[category] = 0;
+  }
+
+  // 2. Add the current revenue to that category's total
+  acc[category] += sale.revenue;
+
+  return acc;
+}, {});
+
+console.log(totalRevenueByCategory);
