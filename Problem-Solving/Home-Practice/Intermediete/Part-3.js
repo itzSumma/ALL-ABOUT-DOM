@@ -53,3 +53,35 @@ function productExceptSelf(nums) {
 }
 
 console.log(productExceptSelf([1,2,3,4]));
+
+
+
+//*Given an array temperatures where:Given an array temperatures where:answer[i] = number of days until a warmer temperature:put 0
+
+//*Answer:*/
+
+function dailyTemperatures(temperatures) {
+  let result = new Array(temperatures.length).fill(0);
+
+  let stack = [];
+
+  for (let i = 0; i < temperatures.length; i++) {
+
+    while (
+      stack.length &&
+      temperatures[i] > temperatures[stack[stack.length - 1]]
+    ) {
+      let prevIndex = stack.pop();
+
+      result[prevIndex] = i - prevIndex;
+    }
+
+    stack.push(i);
+  }
+
+  return result;
+}
+
+console.log(
+  dailyTemperatures([73,74,75,71,69,72,76,73])
+);
